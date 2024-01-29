@@ -7,6 +7,56 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="output.css">
+        <style>
+                    #img5{
+          transform: translateX(0px);
+          animation: float3 3s ease-out infinite;
+        }
+        @keyframes float3{
+          0%{
+            transform: translateX(0px);
+          }
+          10%{
+            transform: translateX(0px);
+          }
+          15%{
+            transform: translateX(0px);
+          }
+          20%{
+            transform: translateX(0px);
+          }
+          25%{
+            transform: translateX(0px);
+          }
+          30%{
+            transform: translateX(0px);
+          }
+          40%{
+            transform: translateX(0px);
+          }
+          50%{
+            transform:  translateY(-3px);
+          }
+          51%{
+            transform:  translateX(2px);
+          }
+          55%{
+            transform: translateY(3px);
+          }
+          60%{
+            transform: translateX(-3px);
+          }
+          70%{
+            transform: scale(0.9);
+          }
+          80%{
+            transform: scale(1.2);
+          }
+          100%{
+            transform: translateX(0px);
+          }
+        }
+        </style>
     </head>
 <body class="animated fadeIn delay-25s bg-slate-900">
     <header id="home" class="bg-slate-950 text-white text-2xl">
@@ -54,7 +104,7 @@
                     <p class="text-xl xl:w-auto  text-left py-4 w-1/2 max-sm:text-center max-sm:w-96 max-md:text-center max-md:w-auto max-lg:text-center max-lg:w-auto max-xl:text-center max-xl:w-auto">Witam wszystkich którzy odwiedzili tą stronę,chciałbym przedstawić wam moje portfolio dotyczące strone internetowych.Moją historie rozpoczolem od nauki podstaw html i css,Potem przeszedłem na framework TailWindCSS.</p>
                         <div class="flex gap-10 py-10 max-xl:flex max-xl:justify-center max-xl:items-center max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:flex-col max-sm:flex max-sm:gap-5 max-sm:justify-center max-sm:items-center max-md:flex-col max-md:flex max-md:gap-5 max-md:justify-center max-md:items-center">
                             <a href="https://discord.gg/X9q2D3dVfs" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent transition-all delay-100">Wpadnij na discord!</a>
-                            <a href="#article" class="py-5 px-5 rounded-xl hover:bg-transparent transition-all delay-100">Dowiedz sie wiecej!<span class="inline-block rotate-90 ml-2">&#10148</span></a>
+                            <a id="img5" href="#article" class="py-5 px-5 rounded-xl hover:bg-transparent transition-all delay-100">Dowiedz sie wiecej!<span class="inline-block rotate-90 ml-2">&#10148</span></a>
                         </div>
                 </div>
             </div>
