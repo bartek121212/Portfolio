@@ -6,10 +6,192 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="output.css">
+        <style>
+                    #img5{
+          transform: translateX(0px);
+          animation: float3 3s ease-out infinite;
+        }
+        @keyframes float3{
+          0%{
+            transform: translateX(0px);
+          }
+          10%{
+            transform: translateX(0px);
+          }
+          15%{
+            transform: translateX(0px);
+          }
+          20%{
+            transform: translateX(0px);
+          }
+          25%{
+            transform: translateX(0px);
+          }
+          30%{
+            transform: translateX(0px);
+          }
+          40%{
+            transform: translateX(0px);
+          }
+          50%{
+            transform:  translateY(-3px);
+          }
+          51%{
+            transform:  translateX(2px);
+          }
+          55%{
+            transform: translateY(3px);
+          }
+          60%{
+            transform: translateX(-3px);
+          }
+          70%{
+            transform: scale(0.9);
+          }
+          80%{
+            transform: scale(1.2);
+          }
+          100%{
+            transform: translateX(0px);
+          }
+        }
+        .boxik {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        /* Add a class to the element to trigger the animation */
+        .boxik.show {
+          opacity: 1;
+          transform: translateY(0);
+          
+        } .boxik2 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik2.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik3 {
+          opacity: 0;
+          transform: translateY(140px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik3.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik4 {
+          opacity: 0;
+          transform: translateY(180px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik4.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik5 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik5.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik6 {
+          opacity: 0;
+          transform: translateY(130px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik6.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik7 {
+          opacity: 0;
+          transform: translateY(120px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik7.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik8 {
+          opacity: 0;
+          transform: translateY(140px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik8.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .boxik9 {
+          opacity: 0;
+          transform: translateY(180px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        /* Add a class to the element to trigger the animation */
+        .boxik9.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        </style>
     </head>
-<body class="bg-slate-900 text-white animated fadeIn delay-25s">
-    <article id="home">
+<body class="animated fadeIn delay-25s bg-slate-900">
+<!--     <header id="home" class="bg-slate-950 text-white text-2xl">
+        <nav class="relative flex flex-wrap items-center justify-between px-2 py-5 bg-slate-900 mb-">
+            <div class="container px-4 mx-auto flex flex-wrap items-center justify-center">
+              <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+                <a class="text-sm max-md:mt-5 max-lg:mt-5 font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="https://discord.gg/X9q2D3dVfs">
+                    PortFolio
+                </a>
+                <button class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                    <svg class="bg-orange-500 rounded-full hover:bg-transparent cursor-pointer hover:border-4 border-indigo-500/50 transition delay-150 duration-300 ease-in-out" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+              </div>
+              <div class="lg:flex items-center hidden" id="example-collapse-navbar">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                  <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xl  font-bold leading-snug text-white hover:text-blue-500 transition-all delay-150" href="index.html">
+                     <span class="ml-2">Home</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xl  font-bold leading-snug text-white hover:text-blue-500 transition-all delay-150" href="projekty.html">
+                        <span class="ml-2">Projekty</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xl  font-bold leading-snug text-white hover:text-blue-500 transition-all delay-150" href="https://discord.gg/X9q2D3dVfs">
+                      <span class="ml-2">Kontakt</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header> -->
+    <main class="text-white" id="home">
         <div class="flex flex-col justify-center items-center py-20">
             <img src="logo.png" class="w-1/6 rounded-full border-2 border-blue-500 max-sm:w-1/2 max-md:w-1/2 max-lg:w-1/3">
           <!--   <div class="flex gap-20 justify-center items-center py-10">
@@ -23,116 +205,127 @@
             </div>
         </div>
         <div class="flex gap-5 justify-center items-center ">
-            <a href="index.html" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent hover:border-2 hover:py-4 hover:px-4 transition-all delay-100">Moje Portfolio</a>
+            <a href="index.html" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent hover:border-2 hover:py-4 hover:px-4 transition-all delay-100">Powrót</a>
           <!--   <a href="projektyport.html" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent hover:border-2 hover:py-4 hover:px-4 transition-all delay-100">Moje Paczki</a> -->
         </div>
-    </article>
-<main class="flex justify-center items-center flex-wrap">
-    <div class="py-96 flex gap-20 flex-wrap justify-center items-center">
-        <div id="div1" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <!-- <a href="https://discord.gg/X9q2D3dVfs"> -->
-                <img id="original-image"  class="rounded-t-lg" src="regulamin.png" alt="" />
-      <!--       </a> -->
-            <div class="p-5">
-                <a href="https://discord.gg/X9q2D3dVfs">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Regulamin Serwer RP</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Cały regulamin jest responsiv.Dostowany pod urządzenia mobilne.Zawarłem bardzo żywotne kolory.</p>
-                <a hre="https://discord.gg/X9q2D3dVfs" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+    </main>
+<article id="article" class="text-white bg-slate-900 flex justify-center gap-20 py-80 flex-wrap">
+    <div class="flex flex-col justify-center items-center flex-wrap">
+        <div class="flex justify-center items-center flex-wrap gap-10">
+            <div class="boxik">
+                    <div id="div1" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                <img id="original-image" class="rounded-t-lg" src="Tailwind-CSS.webp" alt="" />
+                        <div class="p-5">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">TailWindCSS</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Bardzo dobry framowork do pisania stron internetowych zapraszam do użycia.Framework polecany przez wielu frontend-Developer-Junior-..</p>
+                            <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Obczaj więcej
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="boxik2">
+                    <div id="div2" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                            <img id="original-image2" class="rounded-t-lg" src="portfoili.png" alt="" />
+                        <div class="p-5">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Portfolio</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony portfolio dedykowane dla osób które chcą udostępnić swoją działalność.Również dla osób które chcą mieć wizytówke.</p>
+                            <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Obczaj więcej
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="boxik3">
+                    <div id="div3" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                            <img id="original-image3" class="rounded-t-lg" src="serwer.png" alt="" />
+                        <div class="p-5">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Serwer RP strona</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony dedykowane dla wlaścicieli serwerów fivem.Którzy szukają wizytówki serwera bądz reklamy.</p>
+                            <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Obczaj więcej
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="boxik4">
+                    <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                            <img id="original-image4" class="rounded-t-lg" src="respon.png" alt="" />
+                        <div class="p-5">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Responsiv</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+                            <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Obczaj więcej
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="div2" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-   <!--          <a href="https://discord.gg/X9q2D3dVfs"> -->
-                <img id="original-image2" class="rounded-t-lg" src="serwer.png" alt="" />
- <!--            </a> -->
-            <div class="p-5">
-                <a href="https://discord.gg/X9q2D3dVfs">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Strona Serwera RP</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strona dla serwerow rp.Dostosowana pod urządzenia mobilne.Dedykowane dla mniejszych i większych serwerów.</p>
-                <a href="https://discord.gg/X9q2D3dVfs" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+        <a href="projekty.html" class="text-center text-xl font-bold py-5 hover:text-blue-500 transition-all delay-150">Obczaj więcej</a>
+    </div>
+</article>
+<!-- <section class="bg-slate-900 py-40">
+    <h1 class="font-bold text-4xl text-white text-center">Last Update</h1>
+<ol class="flex justify-center max-sm:flex max-sm:flex-col max-sm:ml-14">
+    <li class="relative mb-6 sm:mb-0">
+        <div class="flex items-center">
+            <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
             </div>
+            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-        <div id="div3" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <!--       <a href="https://discord.gg/X9q2D3dVfs"> -->
-                <img id="original-image3" class="rounded-t-lg" src="portfoili.png" alt="" />
-      <!--       </a> -->
-            <div class="p-5">
-                <a href="https://discord.gg/X9q2D3dVfs">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Portfolio</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Pierwsze porfolio.Jest to moje pierwsze portfolio w życiu.Kolejne były bardziej przemyślane i poprawiane.</p>
-                <a href="https://discord.gg/X9q2D3dVfs" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+        <div class="mt-3 sm:pe-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Upgrade v1.0.0</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">marzec, 2023</time>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Początek pisania stron internetowych.</p>
+        </div>
+    </li>
+    <li class="relative mb-6 sm:mb-0">
+        <div class="flex items-center">
+            <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
             </div>
+            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-        <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-<!--             <a href="https://discord.gg/X9q2D3dVfs"> -->
-                <img id="original-image4" class="rounded-t-lg h-40 w-full bg-slate-900" src="windows.png" alt="pierwsze" />
-   <!--          </a> -->
-            <div class="p-5">
-                <a href="https://discord.gg/X9q2D3dVfs">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Windows Serwer</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Konfiguracja serwera pod fivem,wstępna konfiguracja taka jak:podpięcie bazy danych,uruchomienie serwera,możliwość łączności.</p>
-                <a href="https://discord.gg/X9q2D3dVfs" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+        <div class="mt-3 sm:pe-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Upgrade v1.2.0</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Listopdd 23, 2023</time>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Pierwsze plany dotyczące Portfolio i innych stron.</p>
+        </div>
+    </li>
+    <li class="relative mb-6 sm:mb-0">
+        <div class="flex items-center">
+            <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
             </div>
+            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
-<!--         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="serwer.png" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-            </div>
+        <div class="mt-3 sm:pe-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Upgrade v1.3.0</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Styczen 5, 2024</time>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Większy staż,sporo nowej wiedzy.Koniec projektowanie PortFolio.</p>
         </div>
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="serwer.png" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Obczaj!
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-            </div> -->
-        </div>
-  </div>
-</main>
+    </li>
+</ol>
+</section> -->
 <footer class="py-40 bg-slate-950 text-white">
     <div class="flex justify-between items-end px-80 max-md:px-0 max-lg:px-0 max-xl:px-0 max-sm:px-0 text-center max-sm:flex max-sm:flex-col max-md:flex max-md:flex-col max-lg:flex-col max-lg:items-center max-lg:justify-center">
         <div class="text-center flex justify-between gap-20 max-sm:flex max-sm:flex-col max-md:flex max-md:flex-col max-md:items-center max-lg:flex-col max-lg:items-center max-lg:justify-center">
@@ -201,19 +394,23 @@
 </div>
 </footer>
 <script>
-            function revealElement(element, duration, delay, distance, origin) {
-      var initialOpacity = window.getComputedStyle(element).getPropertyValue('opacity');
-      element.style.opacity = '0';
-      setTimeout(function() {
-        element.style.transition = 'opacity ' + duration + 'ms';
-        element.style.opacity = initialOpacity;
-      }, delay);
-    }
-    var animatedElements = document.getElementsByClassName('animated');
-    for (var i = 0; i < animatedElements.length; i++) {
-      revealElement(animatedElements[i], 1000, 500, '50px', 'bottom');
-    }
-const container = document.querySelector('#div1');
+    function toggleNavbar(collapseID){
+document.getElementById(collapseID).classList.toggle("hidden");
+document.getElementById(collapseID).classList.toggle("flex");
+}
+function revealElement(element, duration, delay, distance, origin) {
+          var initialOpacity = window.getComputedStyle(element).getPropertyValue('opacity');
+          element.style.opacity = '0';
+          setTimeout(function() {
+            element.style.transition = 'opacity ' + duration + 'ms';
+            element.style.opacity = initialOpacity;
+          }, delay);
+        }
+        var animatedElements = document.getElementsByClassName('animated');
+        for (var i = 0; i < animatedElements.length; i++) {
+          revealElement(animatedElements[i], 1000, 500, '50px', 'bottom');
+        }
+        const container = document.querySelector('#div1');
 const originalImage = document.querySelector('#original-image');
 const enlargedImage = document.querySelector('#original-image');
 const container2 = document.querySelector('#div2');
@@ -275,6 +472,139 @@ originalImage4.addEventListener('click', () => {
     originalImage4.style.transform = 'scale(1.3)';
   }
 });
+// Define the options for the Intersection Observer
+const options = {
+  root: null,
+  rootMargin: '100px',
+  threshold: 0.9
+};
+const element = document.querySelector('.boxik');
+const element2 = document.querySelector('.boxik2');
+const element3 = document.querySelector('.boxik3');
+const element4 = document.querySelector('.boxik4');
+const element5 = document.querySelector('.boxik5');
+const element6 = document.querySelector('.boxik6');
+const element7 = document.querySelector('.boxik7');
+const element8 = document.querySelector('.boxik8');
+const element9 = document.querySelector('.boxik9');
+
+// Define the options for the Intersection Observer
+const options2 = {
+  root: null,
+  rootMargin: '100px',
+  threshold: 0.9
+};
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element.classList.add('show');
+    }
+/*     else {
+      element.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer2 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element2.classList.add('show');
+    }
+/*     else {
+      element2.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer3 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element3.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer4 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element4.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer5 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element5.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer6 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element6.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer7 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element7.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer8 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element8.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+const observer9 = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If element is in viewport, add the 'show' class to trigger the animation
+    if (entry.isIntersecting) {
+      element9.classList.add('show');
+    }
+/*     else {
+      element3.classList.remove('show');
+    } */
+  });
+}, options2);
+// Start observing the element
+observer.observe(element);
+observer2.observe(element2);
+observer3.observe(element3);
+observer4.observe(element4);
+observer5.observe(element5);
+observer6.observe(element6);
+observer7.observe(element7);
+observer8.observe(element8);
+observer9.observe(element9);
 </script>
 </body>
 </html>
