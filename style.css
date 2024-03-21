@@ -1,0 +1,124 @@
+.gallery-container2 {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.gallery2 {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery2 img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.fullscreen-container2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.fullscreen-image2 {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+.close-fullscreen2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.close-fullscreen2:focus {
+    outline: none;
+}
+.prev2, .next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+.prev2 {
+    left: 0;
+}
+.next2 {
+    right: 0;
+}
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.gallery {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+.close-fullscreen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.close-fullscreen:focus {
+    outline: none;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
