@@ -7,6 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="style.css">
         <style>
                     #img5{
           transform: translateX(0px);
@@ -209,6 +210,18 @@
             </div>
         </div>
     </main>
+    <div class="fullscreen-container" onclick="closeFullscreen()">
+      <button class="close-fullscreen" onclick="closeFullscreen()">✕</button>
+      <img class="fullscreen-image" src="" alt="">
+      <button class="prev" onclick="changeSlide(-1)">❮</button>
+      <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+  <div class="fullscreen-container2" onclick="closeFull()">
+    <button class="close-fullscreen2" onclick="closeFull()">✕</button>
+    <img class="fullscreen-image2" src="" alt="">
+    <button class="prev2" onclick="changeSlide2(-1, event)">❮</button>
+    <button class="next2" onclick="changeSlide2(1, event)">❯</button>
+</div>
     <article id="article" class="text-white bg-slate-900 flex justify-center gap-20 py-80 flex-wrap">
     <div class="flex flex-col justify-center items-center flex-wrap">
         <div class="flex justify-center items-center flex-wrap gap-10">
@@ -229,9 +242,15 @@
                     </div>
                     <div class="boxik2">
                     <div id="div2" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <img id="original-image2" class="rounded-t-lg" src="portfoili.png" alt="" />
+                      <div id="original-image2" class="gallery-container">
+                        <div class="gallery" id="gallery">
+                            <img src="dashboard.png" alt="Zdjęcie 1">
+                            <img src="konsola.png" alt="Zdjęcie 2">
+                            <img src="ostatnia.png" alt="Zdjęcie 3">
+                        </div>
+                      </div>
                         <div class="p-5">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Portfolio</h5>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DashBoard Hosting</h5>
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony portfolio dedykowane dla osób które chcą udostępnić swoją działalność.Również dla osób które chcą mieć wizytówke.</p>
                             <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Obczaj więcej
@@ -244,7 +263,14 @@
                     </div>
                     <div class="boxik3">
                     <div id="div3" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <img id="original-image3" class="rounded-t-lg" src="serwer.png" alt="" />
+                      <div id="original-image3" class="gallery-container2">
+                        <div class="gallery2" id="gallery2">
+                            <img src="stronarp.png" alt="Zdjęcie 1">
+                            <img src="inforp.png" alt="Zdjęcie 2">
+                            <img src="staty.png" alt="Zdjęcie 3">
+                            <img src="regulamin222.png" alt="Zdjęcie 4">
+                        </div>
+                      </div>
                         <div class="p-5">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Serwer RP strona</h5>
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Strony dedykowane dla wlaścicieli serwerów fivem.Którzy szukają wizytówki serwera bądz reklamy.</p>
@@ -484,7 +510,7 @@ originalImage.addEventListener('click', () => {
   }
 });
 
-originalImage2.addEventListener('click', () => {
+/* originalImage2.addEventListener('click', () => {
   isEnlarged = !isEnlarged;
 
   if (isEnlarged) {
@@ -494,9 +520,9 @@ originalImage2.addEventListener('click', () => {
     enlargedImage2.style.display = 'block';
     originalImage2.style.transform = 'scale(1.3)';
   }
-});
+}); */
 
-originalImage3.addEventListener('click', () => {
+/* originalImage3.addEventListener('click', () => {
   isEnlarged = !isEnlarged;
 
   if (isEnlarged) {
@@ -506,7 +532,7 @@ originalImage3.addEventListener('click', () => {
     enlargedImage3.style.display = 'block';
     originalImage3.style.transform = 'scale(1.3)';
   }
-});
+}); */
 
 originalImage4.addEventListener('click', () => {
   isEnlarged = !isEnlarged;
@@ -652,6 +678,90 @@ observer6.observe(element6);
 observer7.observe(element7);
 observer8.observe(element8);
 observer9.observe(element9);
+</script>
+<script>
+      const galleryImages = document.querySelectorAll('.gallery img');
+    const fullscreenContainer = document.querySelector('.fullscreen-container');
+    const fullscreenImage = document.querySelector('.fullscreen-image');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentSlide = 0;
+
+    galleryImages.forEach((img, index) => {
+        img.addEventListener('click', function() {
+            const imageUrl = this.src;
+            fullscreenImage.src = imageUrl;
+            fullscreenContainer.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Wyłącza przewijanie strony w tle
+            currentSlide = index;
+        });
+    });
+
+    fullscreenImage.addEventListener('click', function(event) {
+        event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na obrazek
+        changeSlide(1); // Przewiń do następnego obrazu po kliknięciu na obrazek w trybie pełnoekranowym
+    });
+
+    function closeFullscreen() {
+        fullscreenContainer.style.display = 'none';
+        document.body.style.overflow = ''; // Przywraca przewijanie strony
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) {
+            currentSlide = galleryImages.length - 1;
+        } else if (currentSlide >= galleryImages.length) {
+            currentSlide = 0;
+        }
+        fullscreenImage.src = galleryImages[currentSlide].src;
+    }
+
+    // Zapobieganie propagacji zdarzenia po kliknięciu na przyciskach prev i next
+    prevButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+    nextButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+</script>
+<script>
+   const galleryImages2 = document.querySelectorAll('.gallery2 img');
+    const fullscreenContainer2 = document.querySelector('.fullscreen-container2');
+    const fullscreenImage2 = document.querySelector('.fullscreen-image2');
+    let currentSlide2 = 0;
+
+    galleryImages2.forEach((img, index) => {
+        img.addEventListener('click', function() {
+            const imageUrl = this.src;
+            fullscreenImage2.src = imageUrl;
+            fullscreenContainer2.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Wyłącza przewijanie strony w tle
+            currentSlide2 = index;
+        });
+    });
+
+    fullscreenImage2.addEventListener('click', function(event) {
+        event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na obrazek
+        changeSlide2(1, event); // Przewiń do następnego obrazu po kliknięciu na obrazek w trybie pełnoekranowym
+    });
+
+    function closeFull() {
+        fullscreenContainer2.style.display = 'none';
+        document.body.style.overflow = ''; // Przywraca przewijanie strony
+    }
+
+    function changeSlide2(direction, event) {
+        currentSlide2 += direction;
+        if (currentSlide2 < 0) {
+            currentSlide2 = galleryImages2.length - 1;
+        } else if (currentSlide2 >= galleryImages2.length) {
+            currentSlide2 = 0;
+        }
+        fullscreenImage2.src = galleryImages2[currentSlide2].src;
+        event.stopPropagation(); // Zapobiega zamykaniu fullscreen po kliknięciu na przycisk przewijania
+    }
 </script>
 </body>
 </html>
