@@ -156,6 +156,22 @@
           opacity: 1;
           transform: translateY(0);
         }
+        #img2:hover{
+          filter: drop-shadow(1px 1px 20px rgb(83, 83, 172));
+          transition: ease-in-out 0.5s;
+        }
+        #umh1{
+            filter: drop-shadow(1px 1px 5px rgb(83, 83, 172));
+        }
+        #boxum{
+            transition: transform 1s ease;
+            filter: drop-shadow(1px 1px 5px rgb(83, 83, 172));
+        }
+        #boxum:hover{
+            filter: drop-shadow(1px 1px 20px rgb(83, 83, 172));
+            transition: ease-in-out 0.5s; 
+            transform: scale(1.1);
+        }
         </style>
     </head>
 <body class="animated fadeIn delay-25s bg-slate-900">
@@ -195,7 +211,7 @@
     <main class="text-white bg-slate-950 max-sm:py-40 max-md:py-40 max-lg:py-40">
         <div class="max-sm:ml-5 flex flex-row-reverse justify-center items-center py-60 max-sm:py-80  max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-md:py-80  max-md:flex max-md:flex-col max-md:justify-center max-md:items-center  max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center max-xl:items-center  max-xl:flex max-xl:flex-col max-xl:justify-center">  
             <div class="flex px-96 mt-32  max-xl:-mt-24 max-xl:py-10 max-sm:px-0 justify-end items-end max-sm:-ml-0 max-sm:-mt-60  max-md:px-0 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center  max-md:flex-col max-md:items-center max-md:justify-center max-lg:flex max-lg:flex-col max-lg:justify-center max-xl:items-center  max-xl:flex max-xl:flex-col max-xl:justify-center max-lg:items-center max-md:-mt-60 max-md:py-10 max-lg:py-20 max-lg:-mt-96">     
-                <img src="logo.png" class="absolute rounded-full border-2 border-blue-500 max-sm:w-1/2 max-md:w-1/2 w-full max-lg:w-1/2 max-xl:w-1/4 max-2xl:w-1/4 max-w-96">
+                <img id="img2" src="logo.png" class="absolute rounded-full border-2 border-blue-500 max-sm:w-1/2 max-md:w-1/2 w-full max-lg:w-1/2 max-xl:w-1/4 max-2xl:w-1/4 max-w-96">
                 </div>
             <div class="flex flex-row-reverse text-center h-80 mt-32">
                 <div class="px-28 -mt-60 max-sm:mt-20 max-sm:-ml-0 max-lg:-ml-0 py-20 max-xl:mt-14 max-md:mt-14 max-sm:px-0 max-md:px-0 max-lg:px-0 max-lg:mt-20">
@@ -203,8 +219,8 @@
                     <h1 class="text-blue-400 text-5xl font-sans text-left max-sm:w-96 max-md:text-center max-lg:text-center max-xl:text-center max-sm:text-2xl font-medium">Frontend Developer</h1>
                     <p class="text-xl xl:w-auto  text-left py-4 w-1/2 max-sm:text-center max-sm:w-96 max-md:text-center max-md:w-auto max-lg:text-center max-lg:w-auto max-xl:text-center max-xl:w-auto">Witam wszystkich którzy odwiedzili tą stronę,chciałbym przedstawić wam moje portfolio dotyczące strone internetowych.Moją historie rozpocząłem od nauki podstaw html i css,Potem przeszedłem na framework TailWindCSS.</p>
                         <div class="flex gap-10 py-10 max-xl:flex max-xl:justify-center max-xl:items-center max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:flex-col max-sm:flex max-sm:gap-5 max-sm:justify-center max-sm:items-center max-md:flex-col max-md:flex max-md:gap-5 max-md:justify-center max-md:items-center">
-                            <a href="https://discord.gg/X9q2D3dVfs" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent transition-all delay-100">Wpadnij na discord!</a>
-                            <a id="img5" href="#article" class="py-5 px-5 rounded-xl hover:bg-transparent transition-all delay-100">Dowiedz sie wiecej!<span class="inline-block rotate-90 ml-2">&#10148</span></a>
+                            <a href="https://discord.gg/X9q2D3dVfs" class="py-5 px-5 bg-blue-500 rounded-xl hover:bg-transparent transition-all delay-100 font-bold">Wpadnij na discord!</a>
+                            <a id="img5" href="#article" class="py-5 px-5 rounded-xl hover:bg-transparent transition-all delay-100 font-bold">Dowiedz sie wiecej!<span class="inline-block rotate-90 ml-2">&#10148</span></a>
                         </div>
                 </div>
             </div>
