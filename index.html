@@ -175,6 +175,38 @@
             transition: ease-in-out 0.5s; 
             transform: scale(1.1);
         }
+        details[open] summary ~ * {
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    details:not([open]) summary ~ * {
+      animation: slideUp 0.5s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+    .cale{
+      width: 75%;
+    }
         </style>
     </head>
 <body class="animated fadeIn delay-25s bg-slate-900">
@@ -373,8 +405,49 @@
                     </div>                    
                   </div>
                 </div>    
-            </div>
+            </div> 
         </div>
+        <nav class="cale">
+          <div class="boxik9">
+            <!-- Pierwszy details -->
+            <details class="mb-4 bg-gray-700 rounded-lg shadow p-4">
+              <summary class="cursor-pointer text-lg font-semibold">Często zadawane pytania</summary>
+              <p class="mt-2 text-gray-400">Jak uruchomić stronę internetową? Praktycznie każda strona posiada plik <code>index.html</code>, który otwieramy w przeglądarce.</p>
+            </details>
+          
+            <!-- Drugi details -->
+            <details class="mb-4 bg-gray-700 rounded-lg shadow p-4">
+              <summary class="cursor-pointer text-lg font-semibold">Gdzie uczyć się HTML/CSS?</summary>
+              <p class="mt-2 text-gray-400">Poradniki z YouTube, np. Pasja Informatyki.</p>
+          
+              <!-- Pod-details - Pasja Informatyki -->
+              <details class="mt-4 bg-gray-700 rounded p-3">
+                <summary class="cursor-pointer text-md font-medium">Pasja Informatyki (Etap 1)</summary>
+                <p class="mt-2 text-gray-400 bg-gray-600 px-2 py-2 rounded-md">
+                  <a href="https://www.youtube.com/@Pasjainformatyki" class="hover:text-blue-500 transition-all delay-150">Pasja Informatyki</a>
+                </p>
+              </details>
+          
+              <!-- Pod-details - Flexbox Froggy -->
+              <details class="mt-4 bg-gray-700 rounded p-3 text-gray-400">
+                <summary class="cursor-pointer text-md font-medium">Flexbox Froggy (Etap 2)</summary>
+                <p class="mt-2 text-gray-400 bg-gray-600 px-2 py-2 rounded-md">
+                  <a href="https://flexboxfroggy.com/#pl" class="hover:text-blue-500 transition-all delay-150">Flexbox Froggy to gra ucząca układania elementów na stronie internetowej za pomocą Flexboxa.</a>
+                </p>
+              </details>
+            </details>
+          
+            <!-- Trzeci details -->
+            <details class="bg-gray-700 text-gray-400 rounded-lg shadow p-4">
+              <summary class="cursor-pointer text-lg font-semibold">Jaki framework do HTML?</summary>
+              <div class="flex justify-start items-start flex-wrap gap-2">
+                <p class="mt-2 text-md text-gray-400">Istnieją TailwindCSS oraz Bootstrap. Osobiście używam:</p>
+                <a href="https://tailwindcss.com/" class="hover:text-blue-500 transition-all delay-150">TailwindCSS</a>
+              </div>
+            </details>
+          </div>
+          
+        </nav>
     </article>
 <!-- <section class="bg-slate-900 py-40">
     <h1 class="font-bold text-4xl text-gray-400 text-center">Last Update</h1>
